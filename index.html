@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Valentino</title>
+    <link href ="styles.css" rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+</head>
+<body>
+<div class="Container">  
+    <div id="app1"></div>
+    <div id="app2"></div>
+</div>  
+    <script type="text/babel" src="ValikPhoto.jsx">
+    </script>
+    <script type="text/babel" src="Valik.jsx">
+    </script>
+     
+    <script type="text/babel">
+        const propsValues = {
+            name:"Валентино (Валик)",
+            kind: "карликовый кролик", 
+            hobby: "путешествия(принудительно), футбол",
+            character: "вредный, шкодный",
+            food: "гурман", 
+            age: "3 года", 
+            photos: "фотографироваться не любит",
+            photo: "/Valik.jpg"
+        };
+          ReactDOM.createRoot(
+            document.getElementById("app1")
+        ).render(
+            <React.StrictMode>
+                <ValikPhoto data={propsValues} /> 
+            </React.StrictMode>           
+       )
+       ReactDOM.createRoot(
+            document.getElementById("app2")
+        ).render(
+            <React.StrictMode>
+                <Valik data={propsValues} /> 
+            </React.StrictMode>           
+       )             
+    </script>
+</body>
+</html>
